@@ -4,9 +4,8 @@ In this project, we will implement an End to End DevSecOps Project using many to
 
 **Connect to our Aws Account and Create our security Group**
 For our website to be accessible, we need to enable the ports below:
-http: 80
-https: 443
-Jenkins: 
-Ssh: 22
-Sonarqube: 9000
+
+<img width="1646" height="457" alt="image" src="https://github.com/user-attachments/assets/cfa35f4e-11de-496c-883c-d87b8d5419c7" />
+
+
 
