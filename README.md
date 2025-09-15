@@ -171,11 +171,50 @@ Let's veify if we can access Prometheurs through internet with the port 9090
 
 <img width="702" height="267" alt="image" src="https://github.com/user-attachments/assets/7daaa244-413c-4535-ac93-59924fed68d8" />
 
+Prometheus is up and running as we can see on the Target Health
+
+<img width="1805" height="175" alt="image" src="https://github.com/user-attachments/assets/35e403f3-c8d5-4fd8-93c0-9b575c53ac70" />
+
+**9- Node Exporter**
+
+Docs: https://prometheus.io/docs/guides/node-exporter/
+
+sudo useradd --system --no-create-home --shell /usr/sbin/nologin node_exporter
+
+wget -O node_exporter.tar.gz "https://github.com/prometheus/node_exporter/releases/download/v1.9.1/node_exporter-1.9.1.linux-amd64.tar.gz"
+tar -xvf node_exporter.tar.gz
+sudo mv node_exporter-*/node_exporter /usr/local/bin/
+rm -rf node_exporter*
+
+<img width="672" height="207" alt="image" src="https://github.com/user-attachments/assets/205f64db-f5d1-4b45-8c76-6d226e1cc48a" />
+
+Create Systemd service: (/etc/systemd/system/node_exporter.service)
+
+[Unit]
+Description=Node Exporter
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=node_exporter
+Group=node_exporter
+Type=simple
+Restart=on-failure
+ExecStart=/usr/local/bin/node_exporter --collector.logind
+
+[Install]
+WantedBy=multi-user.target
+
+Enable & start:
+sudo systemctl daemon-reload
+sudo systemctl enable --now node_exporter
+sudo systemctl start node_exporter
+sudo systemctl status node_exporter
+
+<img width="892" height="155" alt="image" src="https://github.com/user-attachments/assets/fa7c46c7-6774-4b50-9b3a-494835c1778a" />
 
 
-
-
-
+**10- Add Node_Exporter and Jenkins to the Prometheus Yaml file**
 
 
 
