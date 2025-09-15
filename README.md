@@ -279,6 +279,10 @@ Now we need to add data. Click on data Sources and select Prometheus, insert the
 <img width="606" height="116" alt="image" src="https://github.com/user-attachments/assets/bd5e2805-72f9-40bc-85b5-c4ae4f0c1b78" />
 
 Go to Grafana dashboard, click on new import and look for the id.
+*Dashboard id*
+Node_Exporter 1860 Docs: https://grafana.com/grafana/dashboards/1860-node-exporter-full/
+jenkins 9964 Docs: https://grafana.com/grafana/dashboards/9964-jenkins-performance-and-health-overview/
+kubernetes 18283 Docs: https://grafana.com/grafana/dashboards/18283-kubernetes-dashboard/
 
 <img width="781" height="130" alt="image" src="https://github.com/user-attachments/assets/abef91a5-f6c0-4b0b-bf17-c406e0f51b0b" />
 
@@ -289,7 +293,40 @@ Choose Prometheus and click on import
 <img width="1462" height="248" alt="image" src="https://github.com/user-attachments/assets/9cf44831-c533-49fe-8ce8-6c671a769199" />
 
 
+Since, we don't have any job niw in our Jenkins Server, the metrics are not yet applicable. Also the Prometheus metrics plugins are not yet installed
 
+ <img width="1422" height="307" alt="image" src="https://github.com/user-attachments/assets/d28a71c1-65a0-42ea-b176-ba4a24432dbf" />
 
+**13- Jenkins Plugins to install**
+For this project, we need to install all the plugins below:
 
+Eclipse Temurin installer Plugin
+NodeJS
+Email Extension Plugin
+OWASP Dependency-Check Plugin
+Pipeline: Stage View Plugin
+SonarQube Scanner for Jenkins
+Prometheus metrics plugin
+Docker API Plugin
+Docker Commons Plugin
+Docker Pipeline
+Docker plugin
+docker-build-step
 
+After installing all those plugins, select restart Jenkins. Jenkins will restart automatically.
+
+**14- SonarQube Docker Container Run for Analysis**
+docker run -d --name sonarqube \
+  -p 9000:9000 \
+  -v sonarqube_data:/opt/sonarqube/data \
+  -v sonarqube_logs:/opt/sonarqube/logs \
+  -v sonarqube_extensions:/opt/sonarqube/extensions \
+  sonarqube:lts-community
+
+Docker images is created
+
+<img width="802" height="123" alt="image" src="https://github.com/user-attachments/assets/51db56d4-9d8d-4cb3-82e2-f9c0a5828483" />
+
+Let's access Sonarqube through internet with port 9000
+
+<img width="525" height="207" alt="image" src="https://github.com/user-attachments/assets/e8d0196b-e42b-4e04-87e0-4d3343346378" />
