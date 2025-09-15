@@ -27,12 +27,30 @@ We will install all the tools in this same server. That's why we decide to go wi
 
   git version 2.43.0 is installed
 
-  **4. install Java**
+**4. Install Java**
 Since the system is already updated, let's install Java
 - OpenJDK 17
 sudo apt install -y openjdk-17-jdk
 
 <img width="877" height="140" alt="image" src="https://github.com/user-attachments/assets/4ee723d7-2bfa-4647-be6b-17a5f81bb6af" />
 
+**5. Install Jenkins**
+Go to https://www.jenkins.io/doc/book/installing/linux/#debianubuntu and copy the appropiate command
 
+sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]" \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+
+Enable and start Jenkins. Check Jenkins status
+sudo systemctl enable --now jenkins
+sudo systemctl start jenkins
+sudo systemctl status jenkins
+
+<img width="888" height="258" alt="image" src="https://github.com/user-attachments/assets/21b44b81-adbc-4b4e-8cbe-4fbbb3f74769" />
+
+Jenkins is active and running
 
