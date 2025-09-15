@@ -361,4 +361,10 @@ On Sonarqube, click on configuration and webhook
  The Sonarqube Jenkins Webhook is created
 <img width="1081" height="128" alt="image" src="https://github.com/user-attachments/assets/b893ab27-e7f9-4477-b1ed-effab16f0099" />
 
-For the secret text of Docker Hub: Go to dockerhub.com
+For the secret text of Docker Hub: Go to dockerhub.com, click on account settings. on the left side, click on personal access token. Create a new one
+
+<img width="1495" height="170" alt="image" src="https://github.com/user-attachments/assets/ad39e4b0-d02d-48b6-bb25-1e55cd8dd471" />
+
+
+
+
