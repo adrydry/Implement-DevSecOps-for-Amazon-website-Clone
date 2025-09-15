@@ -337,10 +337,26 @@ Let's access Sonarqube through internet with port 9000
 
 **15- Jenkins Credentials to Store**
 
-Purpose     	ID	               Type                   	Notes
-Email     	mail-cred	    Username/app password	
-SonarQube	 sonar-token	   Secret text	            From SonarQube application
-Docker Hub	docker-cred	    Secret text	            From your Docker Hub profile
+Purpose     	    ID	               Type                                	Notes
+
+Email     	   mail-cred	          Username/app password	
+
+SonarQube	     sonar-token	        Secret text	                           From SonarQube application
+
+Docker Hub	   docker-cred	        Secret text	                           From your Docker Hub profile
 
 Webhook example:
 http://<jenkins-ip>:8080/sonarqube-webhook/
+
+For mail cred, Go to gmail account, click on app password and create password for specific applications
+
+<img width="630" height="182" alt="image" src="https://github.com/user-attachments/assets/6c5422ed-d3e3-4ccc-933e-7e4730d8b76d" />
+
+<img width="752" height="175" alt="image" src="https://github.com/user-attachments/assets/08d55f5b-208d-4894-a807-0860435ff799" />
+
+For Sonar token, go to sonarqube, click on administration, security and users
+
+<img width="1087" height="161" alt="image" src="https://github.com/user-attachments/assets/73147359-fdf1-429e-94bc-8ccea000838a" />
+
+Let's create our webhook
+
