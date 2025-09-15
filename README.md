@@ -96,5 +96,39 @@ d- Check the status of the Docker: sudo systemctl status docker
 
 <img width="871" height="202" alt="image" src="https://github.com/user-attachments/assets/87d4316e-5153-4919-a12e-0f53fd7146ca" />
 
+**7- Install Trivy**
 
+Docs: https://trivy.dev/v0.65/getting-started/installation/
+
+sudo apt-get install wget apt-transport-https gnupg lsb-release
+wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
+echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
+sudo apt-get update
+sudo apt-get install -y trivy
+
+trivy --version
+
+<img width="572" height="112" alt="image" src="https://github.com/user-attachments/assets/c8d8b122-d0c1-4e2b-aa3f-aa49d6cb3055" />
+
+Trivy is installed
+
+**8- Prometheus**
+
+Official downloads: https://prometheus.io/download/
+
+Generic install steps:
+
+# Create a prometheus user
+sudo useradd --system --no-create-home --shell /usr/sbin/nologin prometheus
+
+wget -O prometheus.tar.gz "https://github.com/prometheus/prometheus/releases/download/v3.5.0/prometheus-3.5.0.linux-amd64.tar.gz"
+tar -xvf prometheus.tar.gz
+cd prometheus-*/
+
+sudo mkdir -p /data /etc/prometheus
+sudo mv prometheus promtool /usr/local/bin/
+sudo mv consoles/ console_libraries/ /etc/prometheus/
+sudo mv prometheus.yml /etc/prometheus/prometheus.yml
+
+sudo chown -R prometheus:prometheus /etc/prometheus /data
 
