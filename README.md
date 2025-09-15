@@ -241,7 +241,7 @@ Now let's restart Prometheus with : sudo systemctl restart prometheus. After ref
 <img width="1815" height="170" alt="image" src="https://github.com/user-attachments/assets/3ace15e5-c3c2-4364-99d7-11c1a9acc682" />
 
 
-**11- Grafana**
+**11- Grafana set up**
 Docs: https://grafana.com/docs/grafana/latest/setup-grafana/installation/debian/
 
 sudo apt-get install -y apt-transport-https software-properties-common wget
@@ -265,6 +265,31 @@ Grafana is up and running
 Let's see if we can access Grafana from internet with the port 3000
 
 <img width="623" height="372" alt="image" src="https://github.com/user-attachments/assets/963a8d15-e714-47e0-b2b5-20936e7d45a3" />
+
+**12 - Grafana sign in and connection to the data**
+
+When you log in the first time, Grafana uses the defaults:Username: admin, Password: admin
+
+<img width="827" height="272" alt="image" src="https://github.com/user-attachments/assets/104a3154-fd08-43ed-9f04-5864c1cde3f0" />
+
+Now we need to add data. Click on data Sources and select Prometheus, insert the prometheus ip adress and save
+
+<img width="597" height="340" alt="image" src="https://github.com/user-attachments/assets/2ba1b974-b197-4d78-9294-687f447253df" />
+
+<img width="606" height="116" alt="image" src="https://github.com/user-attachments/assets/bd5e2805-72f9-40bc-85b5-c4ae4f0c1b78" />
+
+Go to Grafana dashboard, click on new import and look for the id.
+
+<img width="781" height="130" alt="image" src="https://github.com/user-attachments/assets/abef91a5-f6c0-4b0b-bf17-c406e0f51b0b" />
+
+Choose Prometheus and click on import
+<img width="781" height="130" alt="image" src="https://github.com/user-attachments/assets/9eedcaca-00cc-4629-a2b9-dc459bb1c955" />
+
+
+<img width="1462" height="248" alt="image" src="https://github.com/user-attachments/assets/9cf44831-c533-49fe-8ce8-6c671a769199" />
+
+
+
 
 
 
