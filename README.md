@@ -68,21 +68,33 @@ Let's install the plugins
 **6. Install Docker and set up**
 
 Go to https://docs.docker.com/engine/install/ubuntu/ and download the appropriate coomand:
-- Add Docker's official GPG key:
-sudo apt-get update
-sudo apt-get install ca-certificates curl
-sudo install -m 0755 -d /etc/apt/keyrings
-sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
-sudo chmod a+r /etc/apt/keyrings/docker.asc
+a- Add Docker's official GPG key:
+       sudo apt-get update
+       sudo apt-get install ca-certificates curl
+       sudo install -m 0755 -d /etc/apt/keyrings
+       sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+       sudo chmod a+r /etc/apt/keyrings/docker.asc
 
- . Add the repository to Apt sources:
-echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt-get update
+ b- Add the repository to Apt sources:
+       echo \
+            "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+          $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
+          sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+          sudo apt-get update
 
 <img width="922" height="157" alt="image" src="https://github.com/user-attachments/assets/f5e51645-b434-4c70-b6e7-071b5cae0940" />
+
 Docker is up and running
 
-Add user to the Docker group
+c- Add user to the Docker group
+We need to allow to the user to access Docker. To add the user to the Docker Group, use the commands below: 
+
+sudo usermod -aG docker $USER
+newgrp docker (To refresh the docker group)
+
+d- Check the status of the Docker: sudo systemctl status docker
+
+<img width="871" height="202" alt="image" src="https://github.com/user-attachments/assets/87d4316e-5153-4919-a12e-0f53fd7146ca" />
+
+
+
