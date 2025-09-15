@@ -52,10 +52,36 @@ sudo systemctl status jenkins
 
 <img width="888" height="258" alt="image" src="https://github.com/user-attachments/assets/21b44b81-adbc-4b4e-8cbe-4fbbb3f74769" />
 
-Jenkins is active and running. 
+Jenkins is active and running and can be accessed through internet with ip adress:8080
 
 <img width="1073" height="367" alt="image" src="https://github.com/user-attachments/assets/56df4595-2ad5-452d-8b0b-43ae40fa2849" />  
 
 To unlock Jenkins, use: sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+<img width="815" height="152" alt="image" src="https://github.com/user-attachments/assets/d2bef3e7-53da-4031-a41a-6e1ea96bd4c0" />
+
+
+Let's install the plugins
+
+
+
+**6. Install Docker and set up**
+
+Go to https://docs.docker.com/engine/install/ubuntu/ and download the appropriate coomand:
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+
+<img width="922" height="157" alt="image" src="https://github.com/user-attachments/assets/f5e51645-b434-4c70-b6e7-071b5cae0940" />
 
 
