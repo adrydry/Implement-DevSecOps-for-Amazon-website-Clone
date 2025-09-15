@@ -34,7 +34,7 @@ sudo apt install -y openjdk-17-jdk
 
 <img width="877" height="140" alt="image" src="https://github.com/user-attachments/assets/4ee723d7-2bfa-4647-be6b-17a5f81bb6af" />
 
-**5. Install Jenkins**
+**5. Install and Unlock Jenkins**
 Go to https://www.jenkins.io/doc/book/installing/linux/#debianubuntu and copy the appropiate command
 
 sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc \
@@ -52,5 +52,10 @@ sudo systemctl status jenkins
 
 <img width="888" height="258" alt="image" src="https://github.com/user-attachments/assets/21b44b81-adbc-4b4e-8cbe-4fbbb3f74769" />
 
-Jenkins is active and running
+Jenkins is active and running. 
+
+<img width="1073" height="367" alt="image" src="https://github.com/user-attachments/assets/56df4595-2ad5-452d-8b0b-43ae40fa2849" />  
+
+To unlock Jenkins, use: sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
 
