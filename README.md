@@ -214,7 +214,32 @@ sudo systemctl status node_exporter
 <img width="892" height="155" alt="image" src="https://github.com/user-attachments/assets/fa7c46c7-6774-4b50-9b3a-494835c1778a" />
 
 
+
 **10- Add Node_Exporter and Jenkins to the Prometheus Yaml file**
+
+Prometheus scrape config:
+
+Add to /etc/prometheus/prometheus.yml:
+
+  - job_name: "node_exporter"
+    static_configs:
+      - targets: ["<ip-address>:9100"]
+
+  - job_name: "jenkins"
+    metrics_path: /prometheus
+    static_configs:
+      - targets: ["<jenkins-ip>:8080"]
+
+<img width="582" height="241" alt="image" src="https://github.com/user-attachments/assets/8c2bc3f3-9f85-41eb-9f87-6b20d1002c54" />
+
+Now, we have to make sure that our configuration is correctValidate config by using : promtool check config /etc/prometheus/prometheus.yml
+
+<img width="820" height="100" alt="image" src="https://github.com/user-attachments/assets/2a47794e-a3d5-487d-9749-a160b95ef27f" />
+
+Now let's restart Prometheur with : sudo systemctl restart prometheus. After refreshing our Prometheus dashboard, we noticed that Node Exporter is a new metric
+
+<img width="1815" height="170" alt="image" src="https://github.com/user-attachments/assets/3ace15e5-c3c2-4364-99d7-11c1a9acc682" />
+
 
 
 
