@@ -60,11 +60,6 @@ To unlock Jenkins, use: sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 <img width="815" height="152" alt="image" src="https://github.com/user-attachments/assets/d2bef3e7-53da-4031-a41a-6e1ea96bd4c0" />
 
-
-Let's install the plugins
-
-
-
 **6. Install Docker and set up**
 
 Go to https://docs.docker.com/engine/install/ubuntu/ and download the appropriate coomand:
@@ -358,5 +353,12 @@ For Sonar token, go to sonarqube, click on administration, security and users
 
 <img width="1087" height="161" alt="image" src="https://github.com/user-attachments/assets/73147359-fdf1-429e-94bc-8ccea000838a" />
 
-Let's create our webhook
+Let's create our webhook:
 
+On Sonarqube, click on configuration and webhook
+
+<img width="297" height="262" alt="image" src="https://github.com/user-attachments/assets/00084b7e-68a4-4883-9b67-7a43a2a58581" />
+ The Sonarqube Jenkins Webhook is created
+<img width="1081" height="128" alt="image" src="https://github.com/user-attachments/assets/b893ab27-e7f9-4477-b1ed-effab16f0099" />
+
+For the secret text of Docker Hub: Go to dockerhub.com
