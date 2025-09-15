@@ -13,3 +13,20 @@ The security group is created
 
 **2. Create our Ec2 instance**
 <img width="1352" height="203" alt="image" src="https://github.com/user-attachments/assets/79f0153a-bd48-4270-ab5f-4e305c57aabc" />
+
+We will install all the tools in this same server. That's why we decide to go with the t.2 large instance type so that the server will support the workloads.
+
+**3. Update the system and install common packages**
+- sudo apt update
+- sudo apt upgrade -y
+  Install Git:
+- sudo apt update
+- sudo apt install git -y
+  <img width="672" height="207" alt="image" src="https://github.com/user-attachments/assets/c050ccfe-185e-4285-b2bc-d9532288fc89" />
+
+  git version 2.43.0 is installed
+
+  **4. install Java**
+
+  
+
