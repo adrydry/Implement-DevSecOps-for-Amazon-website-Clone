@@ -68,14 +68,14 @@ Let's install the plugins
 **6. Install Docker and set up**
 
 Go to https://docs.docker.com/engine/install/ubuntu/ and download the appropriate coomand:
-# Add Docker's official GPG key:
+- Add Docker's official GPG key:
 sudo apt-get update
 sudo apt-get install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
 sudo chmod a+r /etc/apt/keyrings/docker.asc
 
-# Add the repository to Apt sources:
+ . Add the repository to Apt sources:
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
   $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
@@ -83,5 +83,6 @@ echo \
 sudo apt-get update
 
 <img width="922" height="157" alt="image" src="https://github.com/user-attachments/assets/f5e51645-b434-4c70-b6e7-071b5cae0940" />
+Docker is up and running
 
-
+Add user to the Docker group
