@@ -236,11 +236,35 @@ Now, we have to make sure that our configuration is correctValidate config by us
 
 <img width="820" height="100" alt="image" src="https://github.com/user-attachments/assets/2a47794e-a3d5-487d-9749-a160b95ef27f" />
 
-Now let's restart Prometheur with : sudo systemctl restart prometheus. After refreshing our Prometheus dashboard, we noticed that Node Exporter is a new metric
+Now let's restart Prometheus with : sudo systemctl restart prometheus. After refreshing our Prometheus dashboard, we noticed that Node Exporter is a new metric
 
 <img width="1815" height="170" alt="image" src="https://github.com/user-attachments/assets/3ace15e5-c3c2-4364-99d7-11c1a9acc682" />
 
 
+**11- Grafana**
+Docs: https://grafana.com/docs/grafana/latest/setup-grafana/installation/debian/
+
+sudo apt-get install -y apt-transport-https software-properties-common wget
+
+sudo mkdir -p /etc/apt/keyrings/
+wget -q -O - https://apt.grafana.com/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/grafana.gpg > /dev/null
+
+echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+
+sudo apt-get update
+sudo apt-get install -y grafana
+
+sudo systemctl daemon-reload
+sudo systemctl enable --now grafana-server
+sudo systemctl start grafana-server
+sudo systemctl status grafana-server
+
+Grafana is up and running
+<img width="940" height="138" alt="image" src="https://github.com/user-attachments/assets/ad956157-7696-433d-bb2a-a95dfc6a9b17" />
+
+Let's see if we can access Grafana from internet with the port 3000
+
+<img width="623" height="372" alt="image" src="https://github.com/user-attachments/assets/963a8d15-e714-47e0-b2b5-20936e7d45a3" />
 
 
 
