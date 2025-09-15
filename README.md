@@ -118,7 +118,7 @@ Official downloads: https://prometheus.io/download/
 
 Generic install steps:
 
-# Create a prometheus user
+a- Create a prometheus user
 sudo useradd --system --no-create-home --shell /usr/sbin/nologin prometheus
 
 wget -O prometheus.tar.gz "https://github.com/prometheus/prometheus/releases/download/v3.5.0/prometheus-3.5.0.linux-amd64.tar.gz"
@@ -131,4 +131,52 @@ sudo mv consoles/ console_libraries/ /etc/prometheus/
 sudo mv prometheus.yml /etc/prometheus/prometheus.yml
 
 sudo chown -R prometheus:prometheus /etc/prometheus /data
+
+<img width="698" height="162" alt="image" src="https://github.com/user-attachments/assets/e18157b4-a605-45a9-bf9b-0ef378028905" />
+
+Prometheus is installed
+
+b- Create Prometheus Service
+[Unit]
+Description=Prometheus
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=prometheus
+Group=prometheus
+Type=simple
+Restart=on-failure
+RestartSec=5s
+ExecStart=/usr/local/bin/prometheus \
+  --config.file=/etc/prometheus/prometheus.yml \
+  --storage.tsdb.path=/data \
+  --web.console.templates=/etc/prometheus/consoles \
+  --web.console.libraries=/etc/prometheus/console_libraries \
+  --web.listen-address=0.0.0.0:9090
+
+[Install]
+WantedBy=multi-user.target
+
+c- Enable and Start the service
+
+sudo systemctl daemon-reload
+sudo systemctl enable --now prometheus
+sudo systemctl start prometheus
+sudo systemctl status prometheus
+
+<img width="708" height="138" alt="image" src="https://github.com/user-attachments/assets/cd75bc60-0e63-4269-a3e0-5e58d6981093" />
+
+Let's veify if we can access Prometheurs through internet with the port 9090
+
+<img width="702" height="267" alt="image" src="https://github.com/user-attachments/assets/7daaa244-413c-4535-ac93-59924fed68d8" />
+
+
+
+
+
+
+
+
+
 
