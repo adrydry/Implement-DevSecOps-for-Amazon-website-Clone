@@ -313,7 +313,10 @@ Docker Pipeline
 Docker plugin
 docker-build-step
 
-After installing all those plugins, select restart Jenkins. Jenkins will restart automatically.
+After installing all those plugins, select restart Jenkins. Jenkins will restart automatically and there is a change in Grafana Dashboard
+
+<img width="1211" height="271" alt="image" src="https://github.com/user-attachments/assets/d5eddc8b-414c-491e-8dec-e1cb5dc99d63" />
+
 
 **14- SonarQube Docker Container Run for Analysis**
 docker run -d --name sonarqube \
@@ -330,3 +333,14 @@ Docker images is created
 Let's access Sonarqube through internet with port 9000
 
 <img width="525" height="207" alt="image" src="https://github.com/user-attachments/assets/e8d0196b-e42b-4e04-87e0-4d3343346378" />
+
+
+**15- Jenkins Credentials to Store**
+
+Purpose     	ID	               Type                   	Notes
+Email     	mail-cred	    Username/app password	
+SonarQube	 sonar-token	   Secret text	            From SonarQube application
+Docker Hub	docker-cred	    Secret text	            From your Docker Hub profile
+
+Webhook example:
+http://<jenkins-ip>:8080/sonarqube-webhook/
