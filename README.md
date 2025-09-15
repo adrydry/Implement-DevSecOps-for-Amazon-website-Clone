@@ -22,11 +22,17 @@ We will install all the tools in this same server. That's why we decide to go wi
   Install Git:
 - sudo apt update
 - sudo apt install git -y
+  
   <img width="672" height="207" alt="image" src="https://github.com/user-attachments/assets/c050ccfe-185e-4285-b2bc-d9532288fc89" />
 
   git version 2.43.0 is installed
 
   **4. install Java**
+Since the system is already updated, let's install Java
+- OpenJDK 17
+sudo apt install -y openjdk-17-jdk
 
-  
+<img width="877" height="140" alt="image" src="https://github.com/user-attachments/assets/4ee723d7-2bfa-4647-be6b-17a5f81bb6af" />
+
+
 
