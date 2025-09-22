@@ -392,5 +392,11 @@ Now integrate all those credentials in our Jenkins
   Our 3 credentials are set up in jenkins
   <img width="1386" height="267" alt="image" src="https://github.com/user-attachments/assets/70c63849-a212-402e-87ce-5f0df0cae575" />
 
+**Go to VSC and clone the repository of my code**
+
+<img width="721" height="191" alt="image" src="https://github.com/user-attachments/assets/de47840d-ee71-4e13-b2eb-b0ac80f17e9e" />
+
+
+
 
 
