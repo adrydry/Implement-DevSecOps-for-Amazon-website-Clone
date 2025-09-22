@@ -380,6 +380,17 @@ For the secret text of Docker Hub: Go to dockerhub.com, click on account setting
 
 <img width="1495" height="170" alt="image" src="https://github.com/user-attachments/assets/ad39e4b0-d02d-48b6-bb25-1e55cd8dd471" />
 
+Now integrate all those credentials in our Jenkins
+
+- For the Gmail, go to Jenkins, click on manage jenkins- credentials - Global- Add credential
+
+<img width="840" height="337" alt="image" src="https://github.com/user-attachments/assets/02696f41-23a7-42b4-bc27-c05e812a221a" />
+
+
+- For Sonarqube and Docker, select secret-text
+  
+  Our 3 credentials are set up in jenkins
+  <img width="1386" height="267" alt="image" src="https://github.com/user-attachments/assets/70c63849-a212-402e-87ce-5f0df0cae575" />
 
 
 
