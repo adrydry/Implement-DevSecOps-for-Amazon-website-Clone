@@ -392,9 +392,13 @@ Now integrate all those credentials in our Jenkins
   Our 3 credentials are set up in jenkins
   <img width="1386" height="267" alt="image" src="https://github.com/user-attachments/assets/70c63849-a212-402e-87ce-5f0df0cae575" />
 
-**Go to VSC and clone the repository of my code**
+**Go to gitbash and clone the repository of my code**
 
-<img width="721" height="191" alt="image" src="https://github.com/user-attachments/assets/de47840d-ee71-4e13-b2eb-b0ac80f17e9e" />
+<img width="842" height="117" alt="image" src="https://github.com/user-attachments/assets/a2467815-69b8-4336-8c71-b7e8c3e33d78" />
+
+When we open the jenkinsfile, we noticed : tools { jdk 'jdk17' and   nodejs 'node16'  need to be configure in jenkins.
+
+Go to Jenkins, - Manage Jenkins - Tools ans configure, Jdk, Sonarqube, Docker
 
 
 
