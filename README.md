@@ -60,6 +60,21 @@ To unlock Jenkins, use: sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 <img width="815" height="152" alt="image" src="https://github.com/user-attachments/assets/d2bef3e7-53da-4031-a41a-6e1ea96bd4c0" />
 
+*Jenkins Plugins to Install*
+Eclipse Temurin installer Plugin
+NodeJS
+Email Extension Plugin
+OWASP Dependency-Check Plugin
+Pipeline: Stage View Plugin
+SonarQube Scanner for Jenkins
+Prometheus metrics plugin
+Docker API Plugin
+Docker Commons Plugin
+Docker Pipeline
+Docker plugin
+docker-build-step
+
+
 **6. Install Docker and set up**
 
 Go to https://docs.docker.com/engine/install/ubuntu/ and download the appropriate coomand:
