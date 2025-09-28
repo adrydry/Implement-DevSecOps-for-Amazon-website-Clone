@@ -400,7 +400,14 @@ When we open the jenkinsfile, we noticed : tools { jdk 'jdk17' and   nodejs 'nod
 
 Go to Jenkins, - Manage Jenkins - Tools ans configure, Jdk, Sonarqube, Docker
 
+Our failure
 
+<img width="522" height="237" alt="image" src="https://github.com/user-attachments/assets/176dab6e-2c98-4f49-b87c-911033dfcc02" />
 
+Now See the configuration pipeline of the jenkins
+
+**EKS ALB Ingress Kubernetes Setup Guide**
+
+EKS cluster setup and ALB Ingress Kubernetes Setup Guide
 
 
