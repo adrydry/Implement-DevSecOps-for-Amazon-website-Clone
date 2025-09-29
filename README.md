@@ -404,6 +404,12 @@ Our failure
 
 <img width="522" height="237" alt="image" src="https://github.com/user-attachments/assets/176dab6e-2c98-4f49-b87c-911033dfcc02" />
 
+
+After troubleshooting, our pipeline is working fine
+
+<img width="583" height="247" alt="image" src="https://github.com/user-attachments/assets/6bcb76a3-5c46-4838-a8b6-7cb7d63e6abb" />
+
+
 Now See the configuration pipeline of the jenkins
 
 **EKS ALB Ingress Kubernetes Setup Guide**
