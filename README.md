@@ -409,11 +409,87 @@ After troubleshooting, our pipeline is working fine
 
 <img width="583" height="247" alt="image" src="https://github.com/user-attachments/assets/6bcb76a3-5c46-4838-a8b6-7cb7d63e6abb" />
 
+We received the email notification
 
 Now See the configuration pipeline of the jenkins
+
+
+Our application is now accessible on internet
+
+<img width="950" height="447" alt="image" src="https://github.com/user-attachments/assets/bca11e05-284c-4530-9546-62ead6a0d5ec" />
+
+Now, it's time to deploy our application using Kubernetes
 
 **EKS ALB Ingress Kubernetes Setup Guide**
 
 EKS cluster setup and ALB Ingress Kubernetes Setup Guide
+
+- Install AWS CLI. Use the official documentation on https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+
+<img width="733" height="115" alt="image" src="https://github.com/user-attachments/assets/b2ad3e07-5664-42df-87ad-7a7c0f473d3e" />
+
+- Install Kubernetes. Use the official documentation on
+
+- Install E
+
+- Install Helm. 
+
+<img width="1343" height="71" alt="image" src="https://github.com/user-attachments/assets/518fbf8f-2201-4be1-b7de-07e18ca2daf0" />
+
+- AWS cli configuration
+
+  Let's go to our Aws account, create access key for the user
+
+  <img width="902" height="107" alt="image" src="https://github.com/user-attachments/assets/5b113277-7e83-4557-a281-e6d99907e918" />
+
+  <img width="746" height="240" alt="image" src="https://github.com/user-attachments/assets/600e262a-b188-4f19-9428-d23aa8f34d59" />
+
+  - Create the Cluster
+  <img width="1166" height="242" alt="image" src="https://github.com/user-attachments/assets/ea945f9d-8219-471b-8e00-24376a139412" />
+
+  The 02 nodes are created
+
+  <img width="782" height="177" alt="image" src="https://github.com/user-attachments/assets/9c1766fd-ea4d-4a56-9314-39f2fa7589b0" />
+
+
+  Create IAM Service account
+
+  <img width="915" height="173" alt="image" src="https://github.com/user-attachments/assets/1d58ecae-e006-4956-8dd8-b132c47c3efc" />
+
+
+  Install AWS Load Balancer Controller via Helm
+
+Eks chart are installed
+
+<img width="858" height="132" alt="image" src="https://github.com/user-attachments/assets/8cee7447-99cd-461e-a630-6d120ffe292e" />
+
+our load balancer is installed
+
+<img width="492" height="167" alt="image" src="https://github.com/user-attachments/assets/30ef9869-2b01-4fe6-bfa8-d313e59c69d4" />
+
+the application is up and running 
+
+<img width="812" height="102" alt="image" src="https://github.com/user-attachments/assets/3e7aa774-02b0-4986-9643-170d5bc4fe6b" />
+
+our load balancer is active in our console
+
+<img width="1021" height="235" alt="image" src="https://github.com/user-attachments/assets/24defdfb-c554-4d7c-907e-e2d534737715" />
+
+Target group are healthy
+
+<img width="526" height="145" alt="image" src="https://github.com/user-attachments/assets/c7e7f1ec-cd13-4287-afea-37eabda6ec33" />
+
+
+
+
+<img width="707" height="147" alt="image" src="https://github.com/user-attachments/assets/68649019-5750-4b48-99cc-d264e01a1284" />
+
+
+The application is accessible through the loab balancer DNS
+
+<img width="913" height="302" alt="image" src="https://github.com/user-attachments/assets/367e825a-41c8-41e6-ba98-4887cdb08e77" />
+
+
+Monitor Kubernetes with Prometheus
 
 
