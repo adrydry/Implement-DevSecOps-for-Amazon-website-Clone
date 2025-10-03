@@ -493,3 +493,32 @@ The application is accessible through the loab balancer DNS
 Monitor Kubernetes with Prometheus
 
 
+<img width="832" height="122" alt="image" src="https://github.com/user-attachments/assets/ebc967d0-79c4-4e77-8c1e-dbd75bb7a47c" />
+
+When checking, our Prometheus dashboard, we noticed that the k8 endpoint has a failure message
+
+<img width="882" height="222" alt="image" src="https://github.com/user-attachments/assets/55064f2b-bd53-411c-8e17-3d66970db28a" />
+
+We need to fix this issue by enabling Port 9100 in the security credentials
+
+As we can see, all our servers are up and running
+
+<img width="1802" height="753" alt="image" src="https://github.com/user-attachments/assets/77f0349b-1184-4d65-adc0-ebf4210d9c99" />
+
+Go to Google and check Grafana aws eks dashboard : https://grafana.com/grafana/dashboards/17119-kubernetes-eks-cluster-prometheus/. Copy the dashboard ID
+
+<img width="382" height="420" alt="image" src="https://github.com/user-attachments/assets/b7b42151-bbe5-4a2c-aadb-23c1d270f344" />
+
+Install ArgoCd
+
+<img width="841" height="152" alt="image" src="https://github.com/user-attachments/assets/dd156dc1-ebbf-4aa8-ada2-8699b3fd1448" />
+
+<img width="612" height="152" alt="image" src="https://github.com/user-attachments/assets/0af8c9a6-7f08-4580-8d0a-65585adea04c" />
+
+Now we have the link of our Argocd load balancer
+<img width="1510" height="240" alt="image" src="https://github.com/user-attachments/assets/9bc59b38-4615-4472-b1b0-cc290f8d36b4" />
+We can access the Argocd server from internet
+
+<img width="1848" height="266" alt="image" src="https://github.com/user-attachments/assets/ef2a365d-c8b6-4097-8909-7d6c9433fa25" />
+
+Let access our Argocd server 
